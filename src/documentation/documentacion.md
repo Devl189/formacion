@@ -32,4 +32,4 @@ ____________________________________________________________
 - Creación routing y componente
     - ng g m modules/search --routing
     - ng g c modules/search
-    
+- Modificar app.roting module y el routing del componente

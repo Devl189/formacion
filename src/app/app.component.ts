@@ -6,23 +6,12 @@ import {TranslateService} from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  public title = 'APP.TITLE';
-  public title2: string;
-  public param = {value: 'Paco'};
+export class AppComponent {
 
   constructor(private translate: TranslateService) {
     // Lenguaje por defecto
     this.translate.setDefaultLang('es');
     // Lenguaje en uso
     this.translate.use('es');
-  }
-
-  ngOnInit() {
-    // Obtencion de las traducciones a traves del servicio
-    this.title2 = this.translate.instant('APP.TITLE');
-    this.translate.get('APP.HELLO', {value: 'Antonio'}).subscribe((res: string) => {
-      console.log(res);
-    });
   }
 }
