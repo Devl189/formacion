@@ -21,4 +21,6 @@ ____________________________________________________________
 ### Angular material
 
 - https://material.angular.io/
-    1)  
+    1)  ng add @angular/material (custom, Gestos movil: Y, animaciones: Y )
+        * Este comando ademas de añadir las dependecias del package actualiza en index.htm y los estilos para incluir todo lo necesario para usar angular material.
+        
