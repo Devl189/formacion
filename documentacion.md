@@ -8,6 +8,7 @@
 - Atajos: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - Plugins: https://www.campusmvp.es/recursos/post/visual-studio-code-angular-como-montar-un-entorno-de-desarrollo-productivo-para-este-framework.aspx
 - Creación app: npx -p @angular/cli@7.3.9 ng new angular7app
+- Proyecto Formación: https://github.com/Devl189/formacion
 
 ### Traducciones
 
