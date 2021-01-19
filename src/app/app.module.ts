@@ -29,6 +29,8 @@ export function createTranslateLoader(http: HttpClient) {
       isolate: false,
     }),
   ],
+  // Evita tener que importar el modulo de traducciones en otros modulos
+  exports: [TranslateModule],
   providers: [],
   bootstrap: [AppComponent]
 })
