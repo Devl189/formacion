@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {FormField} from '../../shared/models/interfaces';
 import {Title} from '../../shared/models/title.model';
+import {MockService} from '../../services/mock.service';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   public tiles: Title[] = [];
   public formFields: FormField[] = [];
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private mock: MockService) {
   }
 
   ngOnInit() {
@@ -41,6 +42,9 @@ export class HomeComponent implements OnInit {
 
   saveForm(form: any): void {
     console.log(form);
+    this.mock.saveForm(form).subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

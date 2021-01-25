@@ -41,3 +41,4 @@ ____________________________________________________________
 ### Componentes anidados
 
 - Creacion componente: ng g c nombre-componente
+- Creacion servico: ng g s nombre-servicio
