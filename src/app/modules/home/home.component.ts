@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   public title = 'APP.TITLE';
   public title2: string;
   public param = {value: 'Paco'};
+  public tiles: any[];
 
   constructor(private translate: TranslateService) {
   }
@@ -20,6 +21,13 @@ export class HomeComponent implements OnInit {
     this.translate.get('APP.HELLO', {value: 'Antonio'}).subscribe((res: string) => {
       console.log(res);
     });
+
+    this.tiles = [
+      {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+      {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+      {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+      {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+    ];
   }
 
 }
