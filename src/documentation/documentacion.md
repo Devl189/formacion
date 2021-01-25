@@ -9,6 +9,7 @@
 - Plugins: https://www.campusmvp.es/recursos/post/visual-studio-code-angular-como-montar-un-entorno-de-desarrollo-productivo-para-este-framework.aspx
 - Creación app: npx -p @angular/cli@7.3.9 ng new angular7app
 - Proyecto Formación: https://github.com/Devl189/formacion
+____________________________________________________________
 
 ### Traducciones
 
@@ -24,7 +25,6 @@ ____________________________________________________________
 - https://material.io/resources/icons/?style=baseline
     1)  ng add @angular/material (custom, Gestos movil: Y, animaciones: Y )
         * Este comando ademas de añadir las dependecias del package actualiza en index.htm y los estilos para incluir todo lo necesario para usar angular material.
-
 ____________________________________________________________
 
 ### Enrutamiento: Lazy Load
@@ -35,10 +35,15 @@ ____________________________________________________________
     - ng g c modules/search
 - Modificar app.roting module y el routing del componente
 - Añadir router-outlet en el app.component
-
 ____________________________________________________________
 
 ### Componentes anidados
 
 - Creacion componente: ng g c nombre-componente
 - Creacion servico: ng g s nombre-servicio
+____________________________________________________________
+
+### Observables
+
+- https://www.learnrxjs.io/
+- https://medium.com/@osmancea/programaci%C3%B3n-reactiva-con-rxjs-bebc9432485f

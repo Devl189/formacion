@@ -40,9 +40,13 @@ export class HomeComponent implements OnInit {
     ];
   }
 
+  /**
+   * @description Llama al servicio de guardado
+   * @param form
+   */
   saveForm(form: any): void {
     console.log(form);
-    this.mock.saveForm(form).subscribe(res => {
+    this.mock.saveForm(form).subscribe((res) => {
       console.log(res);
     });
   }
