@@ -1,0 +1,29 @@
+<form *ngIf="form"
+      [formGroup]="form"
+      (ngSubmit)="submitForm()">
+  <span *ngFor="let item of formFields">
+    <!-- Input text -->
+    <mat-form-field *ngIf="item.type === 'input'" class="input-form">
+      <mat-label *ngIf="item.mandatory">{{item.label}}*</mat-label>
+      <mat-label *ngIf="!item.mandatory">{{item.label}}</mat-label>
+      <input matInput id="{{item.id}}" placeholder="{{item.label}}" value="{{item.value}}"
+             formControlName="{{item.id}}">
+    </mat-form-field>
+    <!-- Date picker -->
+    <mat-form-field appearance="fill" *ngIf="item.type === 'date'" class="input-form">
+      <mat-label *ngIf="item.mandatory">{{item.label}}*</mat-label>
+      <mat-label *ngIf="!item.mandatory">{{item.label}}</mat-label>
+      <input matInput [matDatepicker]="picker" id="{{item.id}}" value="{{item.value}}" formControlName="{{item.id}}">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </span>
+  <button mat-raised-button color="primary" type="submit" class="button">
+    <mat-icon>check_circle_outline</mat-icon>
+    Submit
+  </button>
+  <button mat-raised-button color="accent" class="button" type="button" (click)="setValues()">
+    <mat-icon>input</mat-icon>
+    Set values
+  </button>
+</form>

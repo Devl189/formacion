@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {FormField} from '../../shared/models/interfaces';
+import {Title} from '../../shared/models/title.model';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,8 @@ export class HomeComponent implements OnInit {
   public title = 'APP.TITLE';
   public title2: string;
   public param = {value: 'Paco'};
-  public tiles: any[];
+  public tiles: Title[] = [];
+  public formFields: FormField[] = [];
 
   constructor(private translate: TranslateService) {
   }
@@ -22,12 +25,22 @@ export class HomeComponent implements OnInit {
       console.log(res);
     });
 
+    // Inicializacion variables
     this.tiles = [
       {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
       {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
       {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
       {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
     ];
+
+    this.formFields = [
+      {type: 'input', id: 'nombre', mandatory: true, label: 'Nombre'},
+      {type: 'date', id: 'fecha_nac', mandatory: false, label: 'Fecha Nacimiento'}
+    ];
+  }
+
+  saveForm(form: any): void {
+    console.log(form);
   }
 
 }

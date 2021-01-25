@@ -21,6 +21,7 @@ ____________________________________________________________
 ### Angular material
 
 - https://material.angular.io/
+- https://material.io/resources/icons/?style=baseline
     1)  ng add @angular/material (custom, Gestos movil: Y, animaciones: Y )
         * Este comando ademas de añadir las dependecias del package actualiza en index.htm y los estilos para incluir todo lo necesario para usar angular material.
 
@@ -34,3 +35,9 @@ ____________________________________________________________
     - ng g c modules/search
 - Modificar app.roting module y el routing del componente
 - Añadir router-outlet en el app.component
+
+____________________________________________________________
+
+### Componentes anidados
+
+- Creacion componente: ng g c nombre-componente
