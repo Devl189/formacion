@@ -17,6 +17,7 @@ import {
 import {MatButtonModule} from '@angular/material/button';
 import {SectionOneComponent} from './components/section-one/section-one.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [HomeComponent, SectionOneComponent],
@@ -45,7 +46,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSortModule,
     // Formularios reactivos
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // Flex Layout
+    FlexLayoutModule
   ],
   providers: [
     MatDatepickerModule

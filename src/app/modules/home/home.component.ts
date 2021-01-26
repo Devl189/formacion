@@ -13,14 +13,20 @@ import {ELEMENT_DATA} from '../../constants/constants.constants';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
+  // Paginacion y ordenacion tablas
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  // Variables traducciones
   public title = 'APP.TITLE';
   public title2: string;
   public param = {value: 'Paco'};
+  // Variable grid
   public tiles: Title[] = [];
+  // Formulario
   public formFields: FormField[] = [];
+  // Variables Collapsable
   public panelOpenState = false;
+  // Variables Tabla
   public displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   public dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
@@ -41,7 +47,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
       {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
     ];
-
+    // Inicializacion campos formulario
     this.formFields = [
       {type: 'input', id: 'nombre', mandatory: true, label: 'Nombre'},
       {type: 'date', id: 'fecha_nac', mandatory: false, label: 'Fecha Nacimiento'}

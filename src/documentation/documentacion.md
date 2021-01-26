@@ -27,6 +27,12 @@ ____________________________________________________________
         * Este comando ademas de añadir las dependecias del package actualiza en index.htm y los estilos para incluir todo lo necesario para usar angular material.
 ____________________________________________________________
 
+### Flex layout
+
+- https://github.com/angular/flex-layout
+- https://tburleson-layouts-demos.firebaseapp.com/#/docs
+____________________________________________________________
+
 ### Enrutamiento: Lazy Load
 
 - Lazy Load es un patrón de diseño que consiste en retrasar la carga o inicialización de un objeto hasta el momento de su utilización.
