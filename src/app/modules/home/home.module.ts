@@ -4,7 +4,16 @@ import {HomeRoutingModule} from './home-routing.module';
 import {HomeComponent} from './home.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule, MatDatepickerModule, MatIconModule, MatInputModule, MatNativeDateModule} from '@angular/material';
+import {
+  MatCardModule,
+  MatDatepickerModule,
+  MatExpansionModule,
+  MatIconModule,
+  MatInputModule,
+  MatNativeDateModule,
+  MatPaginatorModule, MatSortModule,
+  MatTableModule
+} from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 import {SectionOneComponent} from './components/section-one/section-one.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -28,6 +37,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatNativeDateModule,
     // Date picker
     MatDatepickerModule,
+    // Expansion panel
+    MatExpansionModule,
+    // Table
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
     // Formularios reactivos
     FormsModule,
     ReactiveFormsModule

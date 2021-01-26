@@ -5,3 +5,10 @@ export interface FormField {
   value?: any;
   label: string;
 }
+
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}

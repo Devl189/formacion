@@ -1,20 +1,28 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {FormField} from '../../shared/models/interfaces';
+import {FormField, PeriodicElement} from '../../shared/models/interfaces';
 import {Title} from '../../shared/models/title.model';
 import {MockService} from '../../services/mock.service';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {ELEMENT_DATA} from '../../constants/constants.constants';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   public title = 'APP.TITLE';
   public title2: string;
   public param = {value: 'Paco'};
   public tiles: Title[] = [];
   public formFields: FormField[] = [];
+  public panelOpenState = false;
+  public displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  public dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   constructor(private translate: TranslateService, private mock: MockService) {
   }
@@ -38,6 +46,11 @@ export class HomeComponent implements OnInit {
       {type: 'input', id: 'nombre', mandatory: true, label: 'Nombre'},
       {type: 'date', id: 'fecha_nac', mandatory: false, label: 'Fecha Nacimiento'}
     ];
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   /**
