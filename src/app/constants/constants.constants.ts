@@ -1,7 +1,8 @@
 import { PeriodicElement } from '../shared/models/interfaces';
 
 export const ENDPOINTS = {
-  SAVE: '/save'
+  SAVE: '/save',
+  GET: 'https://jsonplaceholder.typicode.com/posts'
 };
 
 export const ELEMENT_DATA: PeriodicElement[] = [

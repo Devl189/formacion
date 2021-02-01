@@ -22,4 +22,11 @@ export class MockService {
     const res = {status: 'OK', message: 'Guardado realizado con exito'};
     return of(res);
   }
+
+  /**
+   * @description Obtiene datos
+   */
+  getData(): Observable<any> {
+    return this.http.get<any>(ENDPOINTS.GET);
+  }
 }

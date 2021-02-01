@@ -52,6 +52,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
       {type: 'input', id: 'nombre', mandatory: true, label: 'Nombre'},
       {type: 'date', id: 'fecha_nac', mandatory: false, label: 'Fecha Nacimiento'}
     ];
+    // Llamada a servicio
+    this.mock.getData().subscribe(res => {
+      console.log(res);
+    });
   }
 
   ngAfterViewInit() {
