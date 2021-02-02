@@ -8,7 +8,7 @@ export class LoginService {
   }
 
   isLogged(): boolean {
-    // Llamada al servicio de credenciales
+    // Llamada al servicio de credenciales, injeccion del token, ...
     return true;
   }
 }
