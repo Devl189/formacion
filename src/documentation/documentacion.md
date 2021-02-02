@@ -49,6 +49,11 @@ ____________________________________________________________
 - Creacion servico: ng g s nombre-servicio
 ____________________________________________________________
 
+### Custom pipes
+
+- pipes: https://angular.io/guide/pipes
+____________________________________________________________
+
 ### Observables
 
 - https://www.learnrxjs.io/
