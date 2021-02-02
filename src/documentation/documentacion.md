@@ -60,6 +60,17 @@ ____________________________________________________________
 - La finalidad de una directiva es modificar o crear un comportamiento totalmente nuevo de un elemento del DOM
 - https://angular.io/guide/attribute-directives
 ____________________________________________________________
+
+### Guards
+- Los guards en angular son interfaces que permiten proteger las rutas e indican al enrutador si se permitirá la navegación a una ruta o no.
+- Existen 4 tipos:
+    * CanActivate: Mira si el usuario puede acceder a una página determinada.
+    * CanActivateChild: Mira si el usuario puede acceder a las páginas hijas de una determinada ruta.
+    * CanDeactivate: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de comfirmación, si el usuario tiene cambios sin guardar.
+    * CanLoad: Sirve para evitar que la aplicación cargue los módulos si el usuario no está autorizado a hacerlo.
+- https://angular.io/guide/router#preventing-unauthorized-access
+____________________________________________________________
+
 ### Observables
 
 - https://www.learnrxjs.io/
