@@ -4,7 +4,11 @@
   {{title | translate}}<br>
   {{title2 | translate}}<br>
   {{'APP.HELLO' | translate: param}}<br>
-  {{'HOLA' | reverse}}
+  <!-- Custom pipe-->
+  <p>{{'HOLA' | reverse}}</p>
+  <!-- Directiva custom -->
+  <p appHighlight>{{'HOLA'}}</p>
+  <p appHighlight highlightColor="red">{{'HOLA'}}</p>
 </section>
 
 <!-- Grid -->
