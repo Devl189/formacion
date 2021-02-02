@@ -24,7 +24,7 @@ ____________________________________________________________
 - https://material.angular.io/
 - https://material.io/resources/icons/?style=baseline
     1)  ng add @angular/material (custom, Gestos movil: Y, animaciones: Y )
-        * Este comando ademas de añadir las dependecias del package actualiza en index.htm y los estilos para incluir todo lo necesario para usar angular material.
+        * Este comando ademas de añadir las dependencias del package actualiza en index.htm y los estilos para incluir todo lo necesario para usar angular material.
 ____________________________________________________________
 
 ### Flex layout
@@ -45,8 +45,8 @@ ____________________________________________________________
 
 ### Componentes anidados
 
-- Creacion componente: ng g c nombre-componente
-- Creacion servico: ng g s nombre-servicio
+- Creación componente: ng g c nombre-componente
+- Creación servicio: ng g s nombre-servicio
 ____________________________________________________________
 
 ### Pipes
@@ -66,7 +66,7 @@ ____________________________________________________________
 - Existen 4 tipos:
     * CanActivate: Mira si el usuario puede acceder a una página determinada.
     * CanActivateChild: Mira si el usuario puede acceder a las páginas hijas de una determinada ruta.
-    * CanDeactivate: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de comfirmación, si el usuario tiene cambios sin guardar.
+    * CanDeactivate: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de confirmación, si el usuario tiene cambios sin guardar.
     * CanLoad: Sirve para evitar que la aplicación cargue los módulos si el usuario no está autorizado a hacerlo.
 - https://angular.io/guide/router#preventing-unauthorized-access
 ____________________________________________________________
