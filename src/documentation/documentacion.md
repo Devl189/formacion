@@ -47,6 +47,7 @@ ____________________________________________________________
 
 - Creación componente: ng g c nombre-componente
 - Creación servicio: ng g s nombre-servicio
+- ciclos de vida: https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
 ____________________________________________________________
 
 ### Pipes
