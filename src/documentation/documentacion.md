@@ -49,11 +49,17 @@ ____________________________________________________________
 - Creacion servico: ng g s nombre-servicio
 ____________________________________________________________
 
-### Custom pipes
+### Pipes
 
-- pipes: https://angular.io/guide/pipes
+- La finalidad de un pipe es transformar visualmente la información
+- https://angular.io/guide/pipes
 ____________________________________________________________
 
+### Directivas
+
+- La finalidad de una directiva es modificar o crear un comportamiento totalmente nuevo de un elemento del DOM
+- https://angular.io/guide/attribute-directives
+____________________________________________________________
 ### Observables
 
 - https://www.learnrxjs.io/
