@@ -18,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {SectionOneComponent} from './components/section-one/section-one.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {SharedModule} from '../../shared/shared.module';
 
 @NgModule({
   declarations: [HomeComponent, SectionOneComponent],
@@ -48,7 +49,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     FormsModule,
     ReactiveFormsModule,
     // Flex Layout
-    FlexLayoutModule
+    FlexLayoutModule,
+    // Recursos compartidos
+    SharedModule
   ],
   providers: [
     MatDatepickerModule
