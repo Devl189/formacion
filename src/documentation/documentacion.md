@@ -55,6 +55,9 @@ ____________________________________________________________
 
 ### Observables
 
+- Observable: Es aquello que queremos observar, que será implementado mediante una colección de eventos o valores futuros. Un observable puede ser creado a partir de eventos de usuario derivados del uso de un formulario, una llamada HTTP, un almacén de datos, etc. Mediante el observable nos podemos suscribir a eventos que nos permiten hacer cosas cuando cambia lo que se esté observando.
+- Observer: Es el actor que se dedica a observar. Básicamente se implementa mediante una colección de funciones callback que nos permiten escuchar los eventos o valores emitidos por un observable. Las callbacks permitirán especificar código a ejecutar frente a un dato en el flujo, un error o el final del flujo.
+- Subject: es el emisor de eventos, que es capaz de crear el flujo de eventos cuando el observable sufre cambios. Esos eventos serán los que se consuman en los observers.
 - https://www.learnrxjs.io/
 - https://medium.com/@osmancea/programaci%C3%B3n-reactiva-con-rxjs-bebc9432485f
 - https://enriqueoriol.com/blog/2019/03/aprende-rxjs-1.html

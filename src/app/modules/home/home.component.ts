@@ -7,6 +7,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {ELEMENT_DATA} from '../../constants/constants.constants';
 import {Subject} from 'rxjs/internal/Subject';
 import {takeUntil} from 'rxjs/operators';
+import {MessageService} from '../../services/message.service';
 
 @Component({
   selector: 'app-home',
@@ -33,7 +34,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   public displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   public dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor(private translate: TranslateService, private mock: MockService) {
+  constructor(private translate: TranslateService, private mock: MockService, private messageService: MessageService) {
   }
 
   ngOnInit() {
@@ -77,6 +78,20 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.mock.saveForm(form).pipe(takeUntil(this.unsubscribe)).subscribe((res) => {
       console.log(res);
     });
+  }
+
+  /**
+   * @description Llama al servicio de envio de mensajes
+   */
+  sendMessage(): void {
+    this.messageService.sendMessage('Message from Home Component to App Component!');
+  }
+
+  /**
+   * @description Llama al servicio de mensajes para limpiarlos
+   */
+  clearMessages(): void {
+    this.messageService.clearMessages();
   }
 
   ngOnDestroy() {

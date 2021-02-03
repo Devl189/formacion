@@ -108,6 +108,16 @@
   </mat-expansion-panel>
 </section>
 
+<!-- Observables -->
+<button mat-raised-button color="accent" class="button" type="button" (click)="sendMessage()">
+  <mat-icon>forward_to_inbox</mat-icon>
+  Send Message
+</button>
+<button mat-raised-button color="accent" class="button" type="button" (click)="clearMessages()">
+  <mat-icon>clear</mat-icon>
+  Clear Messages
+</button>
+
 <!-- Component -->
 <section class="section">
   <app-section-one

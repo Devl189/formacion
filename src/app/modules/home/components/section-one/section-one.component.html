@@ -26,4 +26,7 @@
     <mat-icon>input</mat-icon>
     Set values
   </button>
+  <!-- icono que escucha los mensajes -->
+  <mat-icon *ngIf="messages.length === 0" matBadgeColor="warn">home</mat-icon>
+  <mat-icon *ngIf="messages.length > 0" matBadge="{{messages.length}}" matBadgeColor="warn">home</mat-icon>
 </form>

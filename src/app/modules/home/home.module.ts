@@ -5,13 +5,15 @@ import {HomeComponent} from './home.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {
+  MatBadgeModule,
   MatCardModule,
   MatDatepickerModule,
   MatExpansionModule,
   MatIconModule,
   MatInputModule,
   MatNativeDateModule,
-  MatPaginatorModule, MatSortModule,
+  MatPaginatorModule,
+  MatSortModule,
   MatTableModule
 } from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
@@ -50,6 +52,8 @@ import {SharedModule} from '../../shared/shared.module';
     ReactiveFormsModule,
     // Flex Layout
     FlexLayoutModule,
+    // Badge
+    MatBadgeModule,
     // Recursos compartidos
     SharedModule
   ],
