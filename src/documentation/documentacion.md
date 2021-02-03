@@ -76,3 +76,6 @@ ____________________________________________________________
 
 - https://www.learnrxjs.io/
 - https://medium.com/@osmancea/programaci%C3%B3n-reactiva-con-rxjs-bebc9432485f
+- https://enriqueoriol.com/blog/2019/03/aprende-rxjs-1.html
+- http://blog.enriqueoriol.com/2019/04/aprende-rxjs-2.html
+- http://blog.enriqueoriol.com/2019/04/aprende-rxjs-3.html

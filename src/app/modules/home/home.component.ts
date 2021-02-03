@@ -1,18 +1,21 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {FormField, PeriodicElement} from '../../shared/models/interfaces';
 import {Title} from '../../shared/models/title.model';
 import {MockService} from '../../services/mock.service';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {ELEMENT_DATA} from '../../constants/constants.constants';
+import {Subject} from 'rxjs/internal/Subject';
+import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
+  // Todos los observables tienen una variable de este tipo
+  private unsubscribe: Subject<void> = new Subject();
   // Paginacion y ordenacion tablas
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -53,7 +56,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       {type: 'date', id: 'fecha_nac', mandatory: false, label: 'Fecha Nacimiento'}
     ];
     // Llamada a servicio
-    this.mock.getData().subscribe(res => {
+    // pipe: permite usar operadores o funcionalidades en un observable, estos se pueden concatenar
+    // takeUntil: permite cancelar la suscripción en función de un evento externo.
+    this.mock.getData().pipe(takeUntil(this.unsubscribe)).subscribe(res => {
       console.log(res);
     });
   }
@@ -69,9 +74,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
    */
   saveForm(form: any): void {
     console.log(form);
-    this.mock.saveForm(form).subscribe((res) => {
+    this.mock.saveForm(form).pipe(takeUntil(this.unsubscribe)).subscribe((res) => {
       console.log(res);
     });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 
 }
