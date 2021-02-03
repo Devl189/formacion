@@ -1,6 +1,6 @@
 # DOCUMENTACIÓN
 
-### Angular
+### Prerequisitos Angular
 
 - Node JS: https://nodejs.org/es/
 - Angular: https://cli.angular.io/
@@ -10,6 +10,56 @@
 - Creación app: npx -p @angular/cli@7.3.9 ng new angular7app
 - Proyecto Formación: https://github.com/Devl189/formacion
 ____________________________________________________________
+
+### Angular essentials
+
+- Estructura correcta de los proyectos: https://blog.rootnite.com/development/angular/como-definir-una-estructura-de-carpetas-altamente-escalable-para-su-proyecto-angular/
+- Componentes y servicios: https://angular.io/guide/component-overview
+    * Creación componente: ng g c nombre-componente
+    * Creación servicio: ng g s nombre-servicio
+- Ciclos de vida: https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
+- Componentes anidados
+____________________________________________________________
+
+### Enrutamiento: Lazy Load
+
+- Lazy Load es un patrón de diseño que consiste en retrasar la carga o inicialización de un objeto hasta el momento de su utilización.
+- Creación routing y componente
+    * ng g m modules/search --routing
+    * ng g c modules/search
+- Modificar app.roting module y el routing del componente
+- Añadir router-outlet en el app.component
+____________________________________________________________
+
+### Pipes
+
+- La finalidad de un pipe es transformar visualmente la información
+- Pipes: https://angular.io/guide/pipes
+____________________________________________________________
+
+### Directivas
+
+- La finalidad de una directiva es modificar o crear un comportamiento totalmente nuevo de un elemento del DOM
+- Directives: https://angular.io/guide/attribute-directives
+____________________________________________________________
+
+### Guards
+- Los guards en angular son interfaces que permiten proteger las rutas e indican al enrutador si se permitirá la navegación a una ruta o no.
+- Existen 4 tipos:
+    * CanActivate: Mira si el usuario puede acceder a una página determinada.
+    * CanActivateChild: Mira si el usuario puede acceder a las páginas hijas de una determinada ruta.
+    * CanDeactivate: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de confirmación, si el usuario tiene cambios sin guardar.
+    * CanLoad: Sirve para evitar que la aplicación cargue los módulos si el usuario no está autorizado a hacerlo.
+- Guards: https://angular.io/guide/router#preventing-unauthorized-access
+____________________________________________________________
+
+### Observables
+
+- https://www.learnrxjs.io/
+- https://medium.com/@osmancea/programaci%C3%B3n-reactiva-con-rxjs-bebc9432485f
+- https://enriqueoriol.com/blog/2019/03/aprende-rxjs-1.html
+- http://blog.enriqueoriol.com/2019/04/aprende-rxjs-2.html
+- http://blog.enriqueoriol.com/2019/04/aprende-rxjs-3.html
 
 ### Traducciones
 
@@ -32,50 +82,3 @@ ____________________________________________________________
 - https://github.com/angular/flex-layout
 - https://tburleson-layouts-demos.firebaseapp.com/#/docs
 ____________________________________________________________
-
-### Enrutamiento: Lazy Load
-
-- Lazy Load es un patrón de diseño que consiste en retrasar la carga o inicialización de un objeto hasta el momento de su utilización.
-- Creación routing y componente
-    - ng g m modules/search --routing
-    - ng g c modules/search
-- Modificar app.roting module y el routing del componente
-- Añadir router-outlet en el app.component
-____________________________________________________________
-
-### Componentes anidados
-
-- Creación componente: ng g c nombre-componente
-- Creación servicio: ng g s nombre-servicio
-- ciclos de vida: https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
-____________________________________________________________
-
-### Pipes
-
-- La finalidad de un pipe es transformar visualmente la información
-- https://angular.io/guide/pipes
-____________________________________________________________
-
-### Directivas
-
-- La finalidad de una directiva es modificar o crear un comportamiento totalmente nuevo de un elemento del DOM
-- https://angular.io/guide/attribute-directives
-____________________________________________________________
-
-### Guards
-- Los guards en angular son interfaces que permiten proteger las rutas e indican al enrutador si se permitirá la navegación a una ruta o no.
-- Existen 4 tipos:
-    * CanActivate: Mira si el usuario puede acceder a una página determinada.
-    * CanActivateChild: Mira si el usuario puede acceder a las páginas hijas de una determinada ruta.
-    * CanDeactivate: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de confirmación, si el usuario tiene cambios sin guardar.
-    * CanLoad: Sirve para evitar que la aplicación cargue los módulos si el usuario no está autorizado a hacerlo.
-- https://angular.io/guide/router#preventing-unauthorized-access
-____________________________________________________________
-
-### Observables
-
-- https://www.learnrxjs.io/
-- https://medium.com/@osmancea/programaci%C3%B3n-reactiva-con-rxjs-bebc9432485f
-- https://enriqueoriol.com/blog/2019/03/aprende-rxjs-1.html
-- http://blog.enriqueoriol.com/2019/04/aprende-rxjs-2.html
-- http://blog.enriqueoriol.com/2019/04/aprende-rxjs-3.html
