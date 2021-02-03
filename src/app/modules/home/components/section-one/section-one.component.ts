@@ -13,7 +13,18 @@ export class SectionOneComponent implements OnInit {
   }
 
   // Elementos de entrada y salida
-  @Input() formFields: FormField[] = [];
+  private privateFormFields: FormField[];
+
+  // @Input() formFields: FormField[] = [];
+  @Input() set formFields(form: FormField[]) {
+    console.log(form);
+    this.privateFormFields = form;
+  }
+
+  get formFields(): FormField[] {
+    return this.privateFormFields;
+  }
+
   @Output() saveForm: EventEmitter<any> = new EventEmitter<any>();
   // Formulario
   public form: FormGroup;
