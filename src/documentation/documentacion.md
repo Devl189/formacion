@@ -31,18 +31,21 @@ ____________________________________________________________
     * ng g c modules/search
 - Modificar app.roting module y el routing del componente
 - Añadir router-outlet en el app.component
+- Lazy load: https://medium.com/@HenryGBC/c%C3%B3mo-implementar-lazy-loading-en-angular-74b6e85d021f
 ____________________________________________________________
 
 ### Pipes
 
 - La finalidad de un pipe es transformar visualmente la información
 - Pipes: https://angular.io/guide/pipes
+- https://medium.com/@knoldus/pipes-in-angular-9-b74d022b509
 ____________________________________________________________
 
 ### Directivas
 
 - La finalidad de una directiva es modificar o crear un comportamiento totalmente nuevo de un elemento del DOM
 - Directives: https://angular.io/guide/attribute-directives
+- https://vanessamarely.medium.com/directivas-en-angular-efb8a8cf78e0
 ____________________________________________________________
 
 ### Guards
@@ -53,6 +56,7 @@ ____________________________________________________________
     * CanDeactivate: Mira si el usuario puede salir de una página, es decir, podemos hacer que aparezca un mensaje, por ejemplo, de confirmación, si el usuario tiene cambios sin guardar.
     * CanLoad: Sirve para evitar que la aplicación cargue los módulos si el usuario no está autorizado a hacerlo.
 - Guards: https://angular.io/guide/router#preventing-unauthorized-access
+- https://codingpotions.com/angular-seguridad
 ____________________________________________________________
 
 ### Observables
