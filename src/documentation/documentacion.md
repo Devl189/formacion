@@ -20,6 +20,7 @@ ____________________________________________________________
     * Creación servicio: ng g s nombre-servicio
 - Ciclos de vida: https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
 - Componentes anidados
+    * Decoradores: https://medium.com/@madhavmahesh/list-of-all-decorators-available-in-angular-71bdf4ad6976
 ____________________________________________________________
 
 ### Enrutamiento: Lazy Load
