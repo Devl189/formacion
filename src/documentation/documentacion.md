@@ -7,12 +7,13 @@
 - Vs: https://code.visualstudio.com/
 - Atajos: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - Plugins: https://www.campusmvp.es/recursos/post/visual-studio-code-angular-como-montar-un-entorno-de-desarrollo-productivo-para-este-framework.aspx
-- Creación app: npx -p @angular/cli@7.3.9 ng new angular7app
 - Proyecto Formación: https://github.com/Devl189/formacion
 ____________________________________________________________
 
 ### Angular essentials
 
+- Creacion app angular: ng new nombre-app
+- Creación app en una version de angular en concreto: npx -p @angular/cli@7.3.9 ng new angular7app
 - Estructura correcta de los proyectos: https://blog.rootnite.com/development/angular/como-definir-una-estructura-de-carpetas-altamente-escalable-para-su-proyecto-angular/
 - Componentes y servicios: https://angular.io/guide/component-overview
     * Creación componente: ng g c nombre-componente
