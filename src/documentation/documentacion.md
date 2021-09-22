@@ -91,3 +91,15 @@ ____________________________________________________________
 - https://github.com/angular/flex-layout
 - https://tburleson-layouts-demos.firebaseapp.com/#/docs
 ____________________________________________________________
+
+### Formularios dinamicos
+
+- https://angular.io/guide/dynamic-form
+- https://mugan86.medium.com/formularios-en-angular-diferencias-template-y-reactive-forms-e37af5e30b81
+- https://medium.com/angular-chile/validaciones-en-formularios-con-angular-d00a2d535d17
+
+### SCSS y SASS
+
+- https://sass-lang.com/
+- https://javifont.medium.com/sass-gu%C3%ADa-para-principiantes-6afb87463f7
+- https://sass-guidelin.es/es/
