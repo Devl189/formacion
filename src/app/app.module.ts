@@ -13,9 +13,11 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
+  // Recuros utilizados en el ambito de este modulo
   declarations: [
     AppComponent
   ],
+  // Importación de modulos necesarios
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -32,10 +34,11 @@ export function createTranslateLoader(http: HttpClient) {
     // Animaciones angular Material
     BrowserAnimationsModule
   ],
-  // Evita tener que importar el modulo de traducciones en otros modulos
+  // Evita tener que importar el modulo de traducciones en otros modulos (Recursos que el modulo exporta para ser utilizados por otros modulos)
   exports: [TranslateModule],
-  // Guard
+  // Guard (Recursos que pueden ser inyectados en un componente)
   providers: [CanActivateRouteGuard],
+  // Indica el componente raiz de la aplicacion
   bootstrap: [AppComponent]
 })
 export class AppModule {
